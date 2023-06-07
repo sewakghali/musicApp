@@ -5,12 +5,13 @@ import Image from "next/image"
 import {FaPlay} from 'react-icons/fa'
 
 interface ListItemProps{
-   image: string,
-   name: string,
-   href: string
+   image: string;
+   name: string;
+   href: string;
+   onPlayClick?: ()=>void;
 }
 
-const ListItem : React.FC<ListItemProps> = ({image, name, href}) => {
+const ListItem : React.FC<ListItemProps> = ({image, name, href, onPlayClick}) => {
    const router = useRouter()
 
    const onClick = ()=>{
