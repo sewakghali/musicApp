@@ -1,6 +1,5 @@
-import Sidebar from '@/components/Sidebar'
 import './globals.css'
-import { Figtree } from 'next/font/google'
+import Sidebar from '@/components/Sidebar'
 import SupabaseProvider from '@/providers/SupabaseProvider'
 import UserProvider from '@/providers/userProvider'
 import ModalProvider from '@/providers/ModalProvider'
@@ -8,10 +7,8 @@ import ToasterProvider from '@/providers/ToasterProvider'
 import getSongsByUserId from '@/actions/getSongsByUserId'
 import Player from '@/components/Player'
 
-const inter = Figtree({ subsets: ['latin'] })
-
 export const metadata = {
-  title: 'Spotify Clone',
+  title: 'My Music App',
   description: 'Muuuusiccc!!!',
 }
 
@@ -26,7 +23,7 @@ export default async function RootLayout({
   
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className='bg-black'>
         <ToasterProvider/>
         <SupabaseProvider>
           <UserProvider>

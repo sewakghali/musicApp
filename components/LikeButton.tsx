@@ -1,6 +1,6 @@
 "use client"
 import { useRouter } from "next/navigation";
-import React, { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import useAuthModal from "@/hooks/useAuthModal";
 import {useSessionContext} from '@supabase/auth-helpers-react'
 import { useUser } from "@/hooks/useUser";
@@ -53,7 +53,7 @@ const LikeButton : React.FC<LikeButtonProps> = ({id}) => {
    const Icon = isLiked ? AiFillHeart : AiOutlineHeart
    return (
       <button  className="hover:opacity-75 transition" onClick={handleLike}>
-         <Icon color={isLiked? '#22c55e': 'white'}/>
+         <Icon size={24} color={isLiked? '#22c55e': 'white'}/>
       </button>
       )
    }

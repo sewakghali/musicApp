@@ -1,6 +1,5 @@
 "use client"
 import { useRouter } from "next/navigation";
-import React, { useEffect, useState } from "react"
 import {twMerge} from 'tailwind-merge'
 import {RxCaretLeft, RxCaretRight} from 'react-icons/rx'
 import {FaUserAlt} from 'react-icons/fa'
@@ -45,10 +44,10 @@ const Header : React.FC<HeaderProps> = ({children, className}) => {
             </div>
 
             <div className="flex md:hidden gap-x-2 items-center">
-               <button className="rounded-full p-2 bg-white flex items-center hover:opacity-75 justify-center transition">
+               <button onClick={()=>router.push('/')} className="rounded-full p-2 bg-white flex items-center hover:opacity-75 justify-center transition">
                   <HiHome size={20} className="text-black"/>
                </button>
-               <button className="rounded-full p-2 bg-white flex items-center hover:opacity-75 justify-center transition">
+               <button onClick={()=>router.push('/search')} className="rounded-full p-2 bg-white flex items-center hover:opacity-75 justify-center transition">
                   <BiSearch size={20} className="text-black"/>
                </button>
             </div>
