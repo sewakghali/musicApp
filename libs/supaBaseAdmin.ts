@@ -24,7 +24,7 @@ export const upsertProductRecord = async(product: Stripe.Product)=>{
    const {error} = await supabaseAdmin.from('products').upsert([productData]);
    if(error) throw error;
 
-   console.log(`Product ${product.id} inserted/updated successfully.`)
+   // console.log(`Product ${product.id} inserted/updated successfully.`)
 }
 
 
@@ -46,7 +46,7 @@ export const upsertPriceRecord = async(price: Stripe.Price)=>{
    const {error} = await supabaseAdmin.from('prices').upsert([priceData]);
    if(error) throw error;
 
-   console.log(`Price for product ${price.product} inserted/updated successfully.`)
+   // console.log(`Price for product ${price.product} inserted/updated successfully.`)
 }
 
 export const createOrRetrieveCustomer = async({
@@ -72,7 +72,7 @@ export const createOrRetrieveCustomer = async({
 
       if(supabaseError) throw supabaseError;
 
-      console.log('New customer created/updated for ', uuid)
+      // console.log('New customer created/updated for ', uuid)
       return customer.id;
    }
    return data.stripe_customer_id;
@@ -130,7 +130,7 @@ export const manageSubscriptionsChange = async(customerId: string, subscriptionI
 
    if(subscriptionUpsertErr) throw subscriptionUpsertErr;
 
-   console.log(`Inserted/updated subscription [${subscriptionData.id} for ${uuid}]`)
+   // console.log(`Inserted/updated subscription [${subscriptionData.id} for ${uuid}]`)
 
    if (createAction && subscription.default_payment_method && uuid){
       await copyBillingDetailsToCustomer( uuid, subscription.default_payment_method as Stripe.PaymentMethod)

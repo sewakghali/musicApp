@@ -100,7 +100,6 @@ const PlayerContent: React.FC<PlayerContentProps> = ({ song, songUrl }) => {
          audioRef.current?.play();
       }
       setIsPlaying(!isPlaying);
-      console.log('play stat: ',isPlaying)
    };
 
    const changeVolume = (val: number) => {
@@ -123,8 +122,6 @@ const PlayerContent: React.FC<PlayerContentProps> = ({ song, songUrl }) => {
       if (audioRef.current) {
          audioRef.current.currentTime = val * duration;
       }
-      console.log(val*duration);
-
    }
 
    useEffect(()=>{
