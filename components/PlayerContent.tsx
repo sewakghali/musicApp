@@ -1,5 +1,5 @@
 "use client"
-import { Song } from "@/types";
+import { Song } from "../types";
 import React, { AudioHTMLAttributes, useEffect, useState, useRef } from "react"
 import { BsPauseFill, BsPlayFill } from 'react-icons/bs'
 import { AiFillStepBackward, AiFillStepForward } from 'react-icons/ai'
@@ -7,7 +7,7 @@ import { HiSpeakerXMark, HiSpeakerWave } from 'react-icons/hi2'
 import MediaItem from "./MediaItem";
 import LikeButton from "./LikeButton";
 import Slider from "./Slider";
-import usePlayer from "@/hooks/usePlayer";
+import usePlayer from "../hooks/usePlayer";
 
 interface PlayerContentProps {
    song: Song,

@@ -1,11 +1,11 @@
 import './globals.css'
-import Sidebar from '@/components/Sidebar'
-import SupabaseProvider from '@/providers/SupabaseProvider'
-import UserProvider from '@/providers/userProvider'
-import ModalProvider from '@/providers/ModalProvider'
-import ToasterProvider from '@/providers/ToasterProvider'
-import getSongsByUserId from '@/actions/getSongsByUserId'
-import Player from '@/components/Player'
+import Sidebar from '../components/Sidebar'
+import SupabaseProvider from '../providers/SupabaseProvider'
+import UserProvider from '../providers/userProvider'
+import ModalProvider from '../providers/ModalProvider'
+import ToasterProvider from '../providers/ToasterProvider'
+import getSongsByUserId from '../actions/getSongsByUserId'
+import Player from '../components/Player'
 
 export const metadata = {
   title: 'My Music App',

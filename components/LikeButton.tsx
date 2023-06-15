@@ -1,9 +1,9 @@
 "use client"
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react"
-import useAuthModal from "@/hooks/useAuthModal";
+import useAuthModal from "../hooks/useAuthModal";
 import {useSessionContext} from '@supabase/auth-helpers-react'
-import { useUser } from "@/hooks/useUser";
+import { useUser } from "../hooks/useUser";
 import {AiFillHeart, AiOutlineHeart} from 'react-icons/ai'
 import {toast} from 'react-hot-toast'
 

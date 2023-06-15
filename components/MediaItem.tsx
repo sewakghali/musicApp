@@ -1,9 +1,9 @@
 "use client"
-import useLoadImage from "@/hooks/useLoadImage";
-import { Song } from "@/types";
-import Image from "next/image";
 import React from "react"
 import {twMerge} from "tailwind-merge";
+import Image from "next/image";
+import useLoadImage from "../hooks/useLoadImage";
+import { Song } from "../types";
 
 interface MediaItemProps{
    data: Song;

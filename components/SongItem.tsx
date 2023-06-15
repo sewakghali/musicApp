@@ -1,11 +1,10 @@
 "use client"
-import useLoadImage from "@/hooks/useLoadImage";
-import { Song } from "@/types";
+import useLoadImage from "../hooks/useLoadImage";
+import { Song } from "../types";
 import React, { use, useEffect, useState } from "react"
 import Image from "next/image"
 import PlayButton from "./PlayButton";
-import usePlayer from "@/hooks/usePlayer";
-import {ScaleLoader} from 'react-spinners'
+import usePlayer from "../hooks/usePlayer";
 
 interface SongItemProps{
    onClick: (id:string)=>void;
@@ -23,38 +22,22 @@ const SongItem : React.FC<SongItemProps> = ({onClick, data}) => {
       if(data.id === player.activeId && isPlaying){
          setIsPlaying(false)
          player.setIsPlaying(true);
-         console.log('option1');
       }
       else if(data.id === player.activeId && !isPlaying){
          setIsPlaying(true);
          player.setIsPlaying(false);
-         // onClick(val)
-         console.log('option2');
       }
       else{
          player.setIsPlaying(false);
          setIsPlaying(true);
-         console.log('option3');
          onClick(val);
       }
    }
 
    useEffect(()=>{
-      // if(data.id === player.activeId && isPlaying){
-      //    setIsPlaying(false)
-      //    console.log('option4');
-      // }
-      // else
        if(data.id === player.activeId && !isPlaying){
          setIsPlaying(true);
-         console.log('option5');
       }
-      // else{
-      //    player.setIsPlaying(false);
-      //    setIsPlaying(true);
-      //    console.log('option3');
-      //    onClick(val);
-      // }
    },[player.activeId]);
 
    return (

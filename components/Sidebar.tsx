@@ -6,8 +6,8 @@ import {BiSearch} from 'react-icons/bi'
 import Box from "./Box"
 import SidebarItem from "./SidebarItem"
 import Library from "./Library"
-import { Song } from "@/types"
-import usePlayer from "@/hooks/usePlayer"
+import { Song } from "../types"
+import usePlayer from "../hooks/usePlayer"
 import { twMerge } from "tailwind-merge"
 
 interface SidebarProps{

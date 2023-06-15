@@ -3,12 +3,12 @@
 import React, { useEffect, useState } from "react"
 import Modal from "./Modal";
 import { useRouter } from "next/navigation";
-import useUploadModal from "@/hooks/useUploadModal";
+import useUploadModal from "../hooks/useUploadModal";
 import { useForm, SubmitHandler, FieldValues } from "react-hook-form";
 import {toast} from 'react-hot-toast'
 import Input from "./Input";
 import Button from "./Button";
-import { useUser } from "@/hooks/useUser";
+import { useUser } from "../hooks/useUser";
 import uniqid from 'uniqid'
 import {useSupabaseClient} from '@supabase/auth-helpers-react'
 

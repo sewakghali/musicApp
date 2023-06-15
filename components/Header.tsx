@@ -5,11 +5,11 @@ import {RxCaretLeft, RxCaretRight} from 'react-icons/rx'
 import {FaUserAlt} from 'react-icons/fa'
 import {HiHome} from 'react-icons/hi'
 import {BiSearch} from 'react-icons/bi'
-import useAuthModal from "@/hooks/useAuthModal";
+import useAuthModal from "../hooks/useAuthModal";
 import {useSupabaseClient} from '@supabase/auth-helpers-react'
 import {toast} from 'react-hot-toast'
 import Button from "./Button";
-import { useUser } from "@/hooks/useUser";
+import { useUser } from "../hooks/useUser";
 
 interface HeaderProps{
    children: React.ReactNode;
@@ -55,7 +55,8 @@ const Header : React.FC<HeaderProps> = ({children, className}) => {
                {user ? 
                <div className="flex gap-x-4 items-center">
                   <Button onClick={handleLogout} className="bg-white text-black px-6 py-2 font-bold">Logout</Button>
-                  <Button onClick={()=>router.push('/account')}>
+                  {/* <Button onClick={()=>router.push('/account')}> */}
+                  <Button onClick={()=>toast.success('We are working on updates. Stay Tuned!')}>
                      <FaUserAlt/>
                   </Button>
                </div> :
